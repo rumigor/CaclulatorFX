@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <stylesheets>
+        <URL value="@/css/style.css"/>
+    </stylesheets>
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem onAction="#unsupported" text="Open" />
+                <MenuItem onAction="#unsupported" text="Save" />
+                <MenuItem onAction="#exitClick" text="Exit" />
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem onAction="#copyText" text="Copy"/>
+                <MenuItem onAction="#pasteText" text="Paste" />
+                <MenuItem onAction="#cutText" text="Cut" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TextField fx:id="textField" prefHeight="100.0" prefWidth="149.0" promptText="Введите выражение для вычисления">
+            <font>
+                <Font size="32.0" />
+            </font></TextField>
+    </center>
+
+    <bottom>
+        <VBox>
+            <GridPane>
+                <Button fx:id="btn1" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="1" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn2" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn3" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn4" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="4" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn5" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn6" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn7" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn8" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn9" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btn0" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnComma" onAction="#addComma" prefHeight="70.0" prefWidth="160.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnPlus" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnMinus" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnMultiply" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnDivision" onAction="#addText" prefHeight="70.0" prefWidth="160.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnSQRT" onAction="#getSQRT" prefHeight="70.0" prefWidth="160.0" text="SQRT" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+
+            </GridPane>
+            <HBox>
+                <Button fx:id="btnEquation" onAction="#getResult" prefHeight="70.0" prefWidth="160.0" text="=" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnChangeSign" onAction="#changeSign" prefHeight="70.0" prefWidth="160.0" text="+/-" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+                <Button fx:id="btnClear" onAction="#clearTextArea" prefHeight="70.0" prefWidth="320.0" text="Очистить" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Button>
+
+
+            </HBox>
+        </VBox>
+
+    </bottom>
+
+    <right>
+
+    </right>
+
+    <left>
+
+    </left>
+
+</BorderPane>

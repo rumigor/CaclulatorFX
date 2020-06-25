@@ -1,0 +1,15 @@
+
+
+#btnEquation {
+    -fx-background-color: #00CC00;
+}
+
+#btnClear {
+-fx-background-color: #E7003E;
+}
+
+
+.button:hover {
+     -fx-background-color: #c5ff10;
+ }
+
